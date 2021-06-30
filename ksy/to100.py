@@ -96,3 +96,120 @@ price_per_month = 48584
 month = 36
 gross_price = price_per_month * month
 print(gross_price)
+
+# 21
+letters = "python"
+print(letters[0], letters[2])
+# 문자열도 리스트처럼!
+
+# 22
+license_plate = "24가 2210"
+print(license_plate[-4:])
+# [first : last(포함x) : step]
+
+# 23
+string = "홀짝홀짝홀"
+print(string[::2])
+
+# 24
+string = "PYTHON"
+print(string[::-1])
+# 역으로 출력하기 !!!
+
+# 25
+phone_number = "010-1111-2222"
+phone_number1 = phone_number.replace("-", " ")
+print(phone_number1)
+# replace(원래, 나중) 메서드!!
+
+# 26
+phone_number2 = phone_number.replace("-", "")
+print(phone_number2)
+
+# 27
+url = "http://sharebook.kr"
+print(url[-2:])
+url_split = url.split('.')
+print(url_split[-1])
+# split(기준) -> 기준으로 나눠서 배열형태로 저장
+
+# 28
+# lang = 'python'
+# lang[0] = 'P'
+# print(lang)
+# 문자열은 수정할 수 없음(immutable)
+
+arr = [0, 1, 2]
+arr[0] = 'p'
+print(arr)
+# 배열은 수정할 수 있음
+
+# 29
+string = 'abcdef2a354a32a'
+string1 = string.replace('a', 'A')
+print(string1)
+# replace의 경우 원래 변수를 바꾸지 않음
+
+# 30
+string = 'abcd'
+string.replace('b', "B")
+print(string)  # abcd
+# 문자열은 변경할 수 없는 자료형이기 때문에 replace 메서드를 사용하면 원본은 그대로 둔 채 새로운 문자열 객체를 리턴해줌
+
+# 31
+a = '3'
+b = '4'
+print(a+b)  # 34
+
+# 32
+print('hi'*3)  # hihihi
+
+# 33
+print('-'*80)
+
+# 34
+t1 = 'python'
+t2 = 'java'
+print((t1+' ' + t2+' ')*4)
+
+# 35
+name1 = "김민수"
+age1 = 10
+name2 = "이철희"
+age2 = 13
+
+print("이름 : %s 나이 : %d" % (name1, age1))
+print("이름 : %s 나이 : %d" % (name2, age2))
+print("%s" % name2)
+
+# 36
+print("이름 : {} 나이 : {}" .format(name1, age1))
+print("이름 : {} 나이 : {}" .format(name2, age2))
+
+# 37
+print(f"이름 : {name1} 나이 : {age1}")
+print(f"이름 : {name2} 나이 : {age2}")
+
+# 38
+상장주식수 = "5,969,782,550"
+상장주식수 = 상장주식수.replace(',', '')
+num = int(상장주식수)
+print(num, type(num))
+
+# 39
+분기 = "2020/03(E) (IFRS연결)"
+print(분기[0:7])
+print(분기[:7])
+
+# 40
+data = "    삼성전자    "
+data1 = data.replace('  ', '')
+print(data1)
+data2 = data.strip()  # strip메서드는 공백 제거
+print(data2)
+
+exam = '123454321'
+exam1 = exam.strip('1')  # strip으로 모든 '1'제거
+print(exam1)
+exam2 = exam.replace('1', '0')  # replace로 모든 '1'을 '0'으로 대체
+print(exam2)
