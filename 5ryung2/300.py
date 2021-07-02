@@ -230,3 +230,47 @@ print(ticker.lower())
 ticker = "BTC_KRW"
 ticker1 = ticker.lower()
 print(ticker1, ticker, sep='\n')
+
+# 043 - capitalize 메소드
+# 'str'.capitalize() = 'Str'
+a = 'hello'
+a = a.capitalize()
+
+# 044 - endswith 메소드
+file_name = "보고서.xlsx"
+result = file_name.endswith('xlsx')
+print(result)
+
+# 045 - endswith 메소드
+# str.endswith(('a', 'b', 'c')) => a, b, c가 str에 포함되어 있는지 확인
+file_name = "보고서.xlsx"
+result = file_name.endswith(('xlsx', 'xls'))
+print(result)
+
+# 046 - startswith 메소드
+file_name = "2020_보고서.xlsx"
+result = file_name.startswith('2020')
+print(result)
+
+# 047 - split 메소드
+a = "hello world"
+result = a.split()
+print(result)
+
+# 048 - split 메소드
+ticker = "btc_krw"
+result = ticker.split('_')
+print(result)
+
+# 049 - split 메소드
+date = "2020-05-01"
+result = date.split('-')
+print(result)
+
+# 050 - rstrip 메소드
+# strip('') : 전달받은 인자를 문자열에서 제거
+# rstrip('') : 전달받은 인자를 문자열의 오른쪽에서부터 제거
+# lstrip('') : 전달받은 인자를 문자열의 왼쪽에서 제거
+data = "039490     "
+result = data.rsplit()
+print(result)
