@@ -176,18 +176,18 @@
 #     # 답지 풀이
 #     print(item[0].upper(), item[1:], sep="")
 
-# # 157 -
+# # 158 -
 # 리스트 = ['hello.py', 'ex01.py', 'intro.hwp']
 # for file in 리스트:
 #     print(file.split('.')[0])
 
-# # 158 - 
+# # 159 - 
 # 리스트 = ['intra.h', 'intra.c', 'define.h', 'run.py']
 # for file in 리스트:
 #     if file.split('.')[-1] == 'h':
 #         print(file)
 
-# # 159 -
+# # 160 -
 # 리스트 = ['intra.h', 'intra.c', 'define.h', 'run.py']
 # for file in 리스트:
 #     if file.split('.')[-1] == "h" or file.split('.')[-1] == "c":
