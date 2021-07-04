@@ -1,28 +1,29 @@
-participants = input()
-participants = participants.split(" ")
+participants = input().split(" ")
 
-correct = input()
-correct = correct.split(" ")
+correct = input().split(" ")
 
+score = dict(zip(participants, correct))
 sum = 0
-for i in range(len(correct)) :
+
+for i in range(len(participants)) :
     if correct[i] == "기권" :
-        del correct[i]
-        del participants[i]
+        del score[participants[i]]
+        del correct[i]  #for로 다시 올라가기 때문에 이렇게 하면 안 된다 correct를 지우면 안 된다
     else :
         sum = sum + int(correct[i])
 
-score = dict(zip(participants, correct))
-average = sum / len(participants)
+average = sum / len(correct)
 
-for i in range(len(participants)) :
+for i in range(len(correct)) :
     if int(score[participants[i]]) <= average :
         del score[participants[i]]
-        del correct[i]
-        del participants[i]
 
-# for i in range(len(participants)) :
-#     if
+print(score)
+
+score = score.items()
+print(score)
+
+sorted(score, key=lambda x: x[1])
 
 
 ========
