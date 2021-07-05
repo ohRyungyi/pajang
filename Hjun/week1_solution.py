@@ -12,13 +12,13 @@ scores = input().split(' ')
 dictionary = dict(zip(names,scores))
 sum = 0
 awards = []
-for i in dictionary.keys():
-    if "기권" in dictionary[i]:
+for i in range(len(dictionary.keys())):
+    if dictionary[i] == "기권":
         del dictionary[i]
     else:
         sum += int(dictionary[i])
 avg = int(sum/len(dictionary.keys()))
-for i in dictionary.keys():
+for i in range(len(dictionary.keys())):
     dictionary[i] = int(dictionary[i])
     if dictionary[i] < avg:
         del dictionary[i]
@@ -26,4 +26,4 @@ for i in dictionary.keys():
         continue
 
 sdict= sorted(dictionary.items(), key=operator.itemgetter(0))
-print(dictionary.keys())
+print(sdict.keys())
