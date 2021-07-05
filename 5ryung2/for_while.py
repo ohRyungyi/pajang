@@ -325,8 +325,40 @@
 #     for j in i:
 #         print(j,'호')
 
-# 186 - 
-apart = [ [101, 102], [201, 202], [301, 302] ]
-for i in range(len(apart)-1, -1, -1):
-    for j in i:
-        print(j)
+# # 186 - 
+# apart = [ [101, 102], [201, 202], [301, 302] ]
+# for i in range(len(apart)-1, -1, -1):
+#     for j in apart[i]:
+#         print(j,'호')
+
+# 187 - 
+# apart = [ [101, 102], [201, 202], [301, 302] ]
+# for i in range(len(apart)-1, -1, -1):
+#     for j in range(len(apart[i])-1, -1, -1):
+#         print(apart[i][j], '호')
+# # 답지 풀이
+# for i in apart[::-1]:
+#     for j in i[::-1]:
+#         print(j, '호')
+
+# # 188 - 
+# apart = [ [101, 102], [201, 202], [301, 302] ]
+# for i in apart[::1]:
+#     for j in i[::1]:
+#         print(j, ' 호', '\n', '_'*5, '\n', sep = '')
+
+# # 189 - 
+# apart = [ [101, 102], [201, 202], [301, 302] ]
+# for i in apart[::1]:
+#     for j in i[::1]:
+#         print(j, '호')
+#     print('_'*5)
+
+# # 190 -
+# apart = [ [101, 102], [201, 202], [301, 302] ]
+# for i in apart[::1]:
+#     for j in i[::1]:
+#         print(j, '호')
+# print('_'*5)
+
+# 191 - 
