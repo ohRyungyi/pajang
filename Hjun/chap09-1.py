@@ -33,4 +33,18 @@ def print_coin():
 # A
 # C
 # B
+# E
 # D
+
+# 209
+# B
+# A
+
+# 210
+# B
+# C
+# B
+# C
+# B
+# C
+# A
