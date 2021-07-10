@@ -314,3 +314,109 @@ k.withdraw(100)
 k.withdraw(200)
 k.withdraw_history()
 
+
+#281
+class Car :
+    def __init__(self, wheel, price) :
+        self.wheel = wheel
+        self.price = price
+
+car = Car(2,1000)
+print(car.wheel)
+print(car.price)
+
+#282
+class Bike(Car) :
+    pass
+
+#283
+bicycle = Bike(2,100) 
+print(bicycle.price)
+#Bike 클래스에 별도로 __init__ 설정 안 해도 작동하는데...?
+
+#284
+class Bicycle(Car) :
+    def __init__(self, wheel,price, div) :
+        self.wheel = wheel
+        self.price = price
+        self.div = div
+
+class Bicycle(Car) :
+    def __init__(self, wheel, price, div) :
+        super().__init__(wheel,price) #부모의 __init__을 불러옴
+        self.div = div
+
+bicycle = Bicycle(2,100,"시마노")
+print(bicycle.div)
+
+#285
+class Car :
+    def __init__(self, wheel, price) :
+        self.wheel = wheel
+        self.price = price
+    
+    def info(self) :
+        print("바퀴수", self.wheel)
+        print("가격", self.price)
+    
+car = Car(4, 1000)
+car.info()
+
+#286
+class Car :
+    def __init__(self, wheel, price) :
+        self.wheel = wheel
+        self.price = price
+    
+    def info(self) :
+        print("바퀴수", self.wheel)
+        print("가격", self.price)
+
+class Bicycle(Car) :
+    def __init__(self, wheel, price, div) :
+        super().__init__(wheel, price)
+        self.div = div
+    
+    def info(self) :
+        super().info()
+        print("구동계", self.div)
+
+bicycle = Bicycle(2,100, "시마노")
+bicycle.info()
+
+#288
+class 부모:
+    def 호출(self):
+        print("부모호출")
+
+class 자식(부모):
+    def 호출(self):
+        print("자식호출")
+
+
+나 = 자식()
+나.호출() #오버라이딩
+
+#289
+class 부모:
+      def __init__(self):
+           print("부모생성")
+
+class 자식(부모):
+    def __init__(self) :
+        print("자식생성")
+
+나 = 자식()
+#생성자 함수에 있는 것들은 생성하면 바로 실행됨
+
+#290
+class 부모:
+      def __init__(self):
+            print("부모생성")
+
+class 자식(부모):
+  def __init__(self):
+        print("자식생성")
+        super().__init__()
+
+나 = 자식()
