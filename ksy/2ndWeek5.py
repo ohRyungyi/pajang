@@ -420,3 +420,87 @@ class 자식(부모):
         super().__init__()
 
 나 = 자식()
+
+#부모클래스에 있는 함수(생성자를 포함해서)를 쓰고 싶으면 super().~~~
+
+#291
+f = open("asd.txt" , "w")
+f.write("005930 삼성전자\n")
+f.write("005380 현대차\n")
+f.write("035420 NAVER")
+f.close()
+
+#292
+
+#295
+print("295번")
+f = open("asd.txt", "r")
+lines = f.readlines()
+print("파일 읽어오기 : ", lines)
+data = {}
+for line in lines:
+    print("lines에서 하나씩 : ", line)
+    line = line.strip()
+    print("strip() : ", line)
+    k, v = line.split()
+    print("split 후 k,v에 넣기 : ", k,v)
+    data[k] = v
+
+print(data)
+f.close()
+
+#296
+per = ["10.31", "", "8.00"]
+
+for i in per:
+    try:
+        print(float(i))
+    except:
+        print(0)
+
+
+#297
+per = ["10.31", "", "8.00"]
+new_per = []
+
+for i in per:
+    try:
+        v = float(i)
+    except:
+        v = 0
+    new_per.append(v)
+
+print(new_per)
+
+#298
+num1 = int(input("숫자를 입력하세요"))
+num2 = int(input("숫자를 입력하세요"))
+
+try : 
+    print(num1/num2)
+except ZeroDivisionError :
+    print("0d으로 나누면 안 돼요")
+
+#299
+try :
+    data = [1,2,3]
+
+    for i in range(5) :
+        print(data[i])
+except IndexError as nope :
+    print(nope) #nope으로 list index out of range 라는 문장을 출력함
+
+#300
+per = ["10.31","", "8.00"]
+
+for i in per :
+    print("for문 시작합니다")
+    try : 
+        print(float(i))
+    except :
+        print("오류발생함")
+        print(0)
+    else :
+        print("오류 발생 안 함")
+    finally :
+        print("항상 실행함")
