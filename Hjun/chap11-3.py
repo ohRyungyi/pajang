@@ -14,6 +14,7 @@ class Account():
         ran3 = str(random.randint(0,999999))
         self.account_num = ran1.zfill(3)+'-'+ran2.zfill(2)+'-'+ran3.zfill(6)
         Account.cnt +=1
+        
     @classmethod
     def get_account_num(acc):
         print(acc.cnt)
